@@ -1,3 +1,42 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+body.welcome {
+  background-image: url("/imgs/adventure-alps-camp-618848.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+hr {
+  width: 500px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+html.welcome {
+  height: 100%;
+}
+
+#mainNavbar .nav-link:hover {
+    color: white;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.jumbotron {
+  background: rgba(204,204,204,0.3);
+}
+
+.navbar {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+}
+
 .thumbnail img {
     width: 100%;
 }
@@ -8,8 +47,4 @@
 
 .thumbnail .caption-full {
     padding: 9px;
-}
-
-.delete-form {
-    display: inline;
 }
