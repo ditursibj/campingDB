@@ -1,8 +1,17 @@
-<% include partials/header %>
-<h1>Landing Page</h1>
-
-<p>Welcome to YelpCamp</p>
-
-<a href="/campgrounds">View the Campgrounds Page</a>
+<!DOCTYPE html>
+<html class="welcome">
+    <head>
+        <title>Camping DB</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+    </head>
+    <body class="welcome">
+      <section id="header" class="jumbotron text-center">
+        <h2 class="display-4">Welcome to CampDB</h2>
+        <p class="lead">Your one-stop-shop for rating and reviewing campgrounds across the U.S.</p>
+        <a href="/campgrounds"><button class="btn btn btn-info btn-lg" type="button" name="getStarted"><i class="fas fa-campground"></i> Get Started</button></a>
+      </section>
 
 <% include partials/footer %>
