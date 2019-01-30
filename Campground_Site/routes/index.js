@@ -37,8 +37,7 @@ router.get("/login", function(req, res){
     res.render("login");
 });
 
-//Handle the login logic
-//use middleware via passport to authenticate new user, using the LocalStrategy created above
+//handling login logic
 router.post("/login", passport.authenticate("local",
     {
         successRedirect: "/campgrounds",
@@ -46,12 +45,13 @@ router.post("/login", passport.authenticate("local",
     }), function(req, res){
 });
 
-//logout route
+// logout route
 router.get("/logout", function(req, res){
-    req.logout();
-    req.flash("error", "Logged you out!");
-    res.redirect("/campgrounds");
+   req.logout();
+   req.flash("success", "Logged you out!");
+   res.redirect("/campgrounds");
 });
+
 
 
 module.exports = router;

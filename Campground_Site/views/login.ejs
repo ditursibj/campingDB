@@ -1,12 +1,24 @@
 <% include ./partials/header.ejs %>
 
-<h1>Login</h1>
+<div class="container-fluid d-flex justify-content-center loginHeader">
+  <h2>Login to CampDB</h2>
+</div>
 
-<form action="/login" method="POST">
-    <input type="text" name="username" placeholder="username">
-    <input type="password" name="password" placeholder="password">
-    <input type="submit" value="Login">
-
-</form>
+<div class="container-fluid d-flex justify-content-center">
+  <form class="loginForm rounded border border-light" action="/login" method="POST">
+    <div class="form-group row">
+      <label for="username"><strong>Username</strong></label>
+      <input type="text" class="form-control" id="username" name="username" aria-describedby="Enter username" placeholder="CampDB username">
+      <small class="form-text text-muted">Hopefully you remember your credentials <i class="fas fa-smile-beam"></i></small>
+    </div>
+    <div class="form-group row">
+      <label for="password"><strong>Password</strong></label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+    </div>
+    <div class="row">
+      <input type="submit" class="btn btn-primary" value="Login">
+    </div>
+  </form>
+</div>
 
 <% include ./partials/footer.ejs %>

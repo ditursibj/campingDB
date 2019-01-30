@@ -32,6 +32,15 @@ html.welcome {
   background: rgba(204,204,204,0.3);
 }
 
+.loginHeader {
+  padding: 10px 10px 10px 10px;
+}
+
+.loginForm {
+  padding: 10px 25px 10px 25px;
+  background: #f7f7f7
+}
+
 .navbar {
   font-family: 'Oswald', sans-serif;
   font-size: 1rem;
