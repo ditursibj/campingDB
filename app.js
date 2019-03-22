@@ -66,5 +66,5 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 //Add the or clause with a port number for local serving
 app.listen(process.env.PORT || 8000, function(){
     console.log("The YelpCamp Server has Started");
-    console.log(MONGO_URI);
+    console.log(process.env.MONGO_URI);
 });
