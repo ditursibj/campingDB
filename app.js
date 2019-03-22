@@ -64,5 +64,5 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 // use process.env.PORT for deployment server
 //Add the or clause with a port number for local serving
 app.listen(process.env.PORT || 8000, process.env.IP, function(){
-    console.log("The YelpCamp Server has Started on port " + process.env.PORT);
+    console.log("The YelpCamp Server has Started");
 });
