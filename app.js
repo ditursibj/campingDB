@@ -17,6 +17,7 @@ var commentRoutes   = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes     = require("./routes/index");
 
+console.log(MONGO_URI);
 //Connect mongoose to a DB
 // local connection is mongodb://localhost/yelp_camp_v11
 //Add a ENV variable MONGO_URI locally and to heroku. Locally, MONGO_URI will store the local db credentials
