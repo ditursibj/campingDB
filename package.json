@@ -1,13 +1,10 @@
-
-    
 {
   "name": "projects",
   "version": "1.0.0",
   "description": "Repository used for all side projects and portfolios",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
