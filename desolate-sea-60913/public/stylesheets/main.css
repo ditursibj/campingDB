@@ -1,0 +1,91 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+body.welcome {
+  background: linear-gradient(rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0.2)),
+            url("/imgs/adventure-alps-camp-618848.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+hr {
+  width: 500px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+html.welcome {
+  height: 100%;
+}
+
+#mainNavbar .nav-link:hover {
+    color: white;
+}
+
+#loginImage {
+    background: linear-gradient(rgba(255, 255, 255, 0.3),
+              rgba(255, 255, 255, 0.3),
+              rgba(255, 255, 255, 0.3),
+              rgba(255, 255, 255, 0.3)),
+              url("/imgs/walking.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.fullPageDiv {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#homeJumbo {
+  background: none;
+  margin-top: 130px;
+}
+
+.loginHeader {
+  padding: 10px 10px 5px 10px;
+}
+
+.loginForm {
+  padding: 10px 25px 10px 25px;
+  margin-top: 100px;
+  background: #f7f7f7;
+}
+
+.navbar {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+}
+
+#signupImage {
+    background: linear-gradient(rgba(255, 255, 255, 0.2),
+              rgba(255, 255, 255, 0.2),
+              rgba(255, 255, 255, 0.2),
+              rgba(255, 255, 255, 0.2)),
+              url("/imgs/campStove.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
