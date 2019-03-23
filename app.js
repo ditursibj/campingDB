@@ -21,7 +21,7 @@ var commentRoutes   = require("./routes/comments"),
 //local db mongodb://localhost/yelp_camp_v11
 //Add a ENV variable MONGO_URI locally and to heroku. Locally, MONGO_URI will store the local db credentials
 //MONGO_URI will store the PROD db connection in heroku
-mongoose.connect("mongodb+srv://bryan:bjd123@prod-cluster-7rzqw.mongodb.net/test?retryWrites=true")
+mongoose.connect(process.env.MONGO_URI)
 //Always use the line below when you want to use body parser
 app.use(bodyParser.urlencoded({extended: true}));
 //setting view engine as ejs allows us to leave off .ejs
@@ -65,5 +65,5 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 // use process.env.PORT for deployment server
 //Add the or clause with a port number for local serving
 app.listen(process.env.PORT || 8000, process.env.IP, function(){
-    console.log("The YelpCamp Server has Started on port " + process.env.PORT + " and IP " + process.env.IP);
+    console.log("The YelpCamp Server has Started");
 });
