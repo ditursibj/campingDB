@@ -18,6 +18,7 @@ var commentRoutes   = require("./routes/comments"),
     indexRoutes     = require("./routes/index");
 
 //Connect mongoose to a DB
+//local db mongodb://localhost/yelp_camp_v11
 //Add a ENV variable MONGO_URI locally and to heroku. Locally, MONGO_URI will store the local db credentials
 //MONGO_URI will store the PROD db connection in heroku
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true})
