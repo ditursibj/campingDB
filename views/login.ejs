@@ -1,9 +1,18 @@
 <% include ./partials/header.ejs %>
 
 <div class="fullPageDiv" id="loginImage">
-  <div class="container d-flex justify-content-center">
+  <div class="container-fluid d-flex justify-content-center">
     <form class="loginForm rounded border border-light" action="/login" method="POST">
       <h2 class="container-fluid d-flex justify-content-center loginHeader">Login to CampDB</h2>
+      <!-- If a flash message exists and is not empty, display it -->
+      <% if (error != "") { %>
+        <div class="alert alert-danger">
+          <%= error %>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      <% } %>
       <div class="form-group row">
         <label for="username"><strong>Username</strong></label>
         <input type="text" class="form-control" id="username" name="username" aria-describedby="Enter username" placeholder="CampDB username">
@@ -21,3 +30,7 @@
 </div>
 
 <% include ./partials/footer.ejs %>
+<script type="text/javascript">
+  // Remove the div that connect-flash automatically assigns
+  $("div").remove(".container");
+</script>
