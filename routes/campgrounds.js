@@ -17,6 +17,17 @@ router.get("/", function (req, res){
     });
 });
 
+//Show campgrounds created by logged in user
+router.get("/userCamps", middleware.isLoggedIn, function (req, res){
+  Campground.find({}, function(err, allCampgrounds){
+    if (err){
+      console.log(err);
+    } else {
+      res.render("campgrounds/userCamps", {campgrounds: allCampgrounds, currentUser: req.user});
+    }
+  });
+});
+
 //NEW campgrounds
 //Make sure user is logged in before they can add a campground
 //This is done by passing isLoggedIn as a param in the .get function

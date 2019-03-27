@@ -12,6 +12,9 @@
                 $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
             });
         });
+
+        // Used to show the modal on the userCamps page if a user has no associated campgrounds
+        $('#noCampsModal').modal({show: true, backdrop: "static", keyboard: false});
     </script>
     </body>
 </html>

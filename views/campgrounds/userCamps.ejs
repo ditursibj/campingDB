@@ -1,0 +1,44 @@
+<% include ../partials/header.ejs %>
+ <section id="campGallery">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <% campCount = []; %>
+        <% campgrounds.forEach(function(campground){ %>
+          <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
+            <div class="card">
+              <img class="card-img-top" src="<%= campground.image %>" alt="">
+              <h5 class="card-header text-center"><%= campground.name %></h5>
+              <div class="card-body">
+                <p class="card-text"><%= campground.description %></p>
+                <a href="/campgrounds/<%= campground._id %>" class="btn btn-outline-success btn-sm">More Info</a>
+                <a href="#" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+              </div>
+              <footer class="card-footer text-muted">Submitted by: <strong><%= campground.author.username %></strong></footer>
+            </div>
+            <% campCount.push(campground._id) %>
+          <% }}); %>
+          <% if (campCount === undefined || campCount.length == 0){ %>
+            <div class="modal fade" id="noCampsModal" tabindex="-1" role="dialog" aria-labelledby="noAssociatedCampgrounds" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Woops!</h5>
+                  </div>
+                  <div class="modal-body d-flex align-items-center">
+                    <p>No campgrounds have been entered by <%= currentUser.username %></p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="/campgrounds/new" class="btn btn-info">Add One!</a>
+                    <a href="/campgrounds" class="btn btn-secondary">Back</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <% }; %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<% include ../partials/footer.ejs %>

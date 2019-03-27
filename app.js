@@ -21,7 +21,7 @@ var commentRoutes   = require("./routes/comments"),
 //local db mongodb://localhost/yelp_camp_v11
 //Add a ENV variable MONGO_URI locally and to heroku. Locally, MONGO_URI will store the local db credentials
 //MONGO_URI will store the PROD db connection in heroku
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useFindAndModify: false })
 //Always use the line below when you want to use body parser
 app.use(bodyParser.urlencoded({extended: true}));
 //setting view engine as ejs allows us to leave off .ejs
