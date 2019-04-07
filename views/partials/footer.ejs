@@ -1,5 +1,23 @@
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <footer class="footer d-flex align-items-center">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-8 justify-content-start align-items-center">
+              <ul class="nav">
+                <li class="nav-item"><a href="https://www.linkedin.com/in/bryan-ditursi-81308389/"><i class="fab fa-linkedin whiteLink"></i></a></li>
+                <li class="nav-item m-2">|</li>
+                <li class="nav-item"><a href="https://github.com/ditursibj"><i class="fab fa-github whiteLink"></i></a></li>
+                <li class="nav-item m-2">|</li>
+                <li class="nav-item"><a href="https://stackoverflow.com/users/4746460/b-ditursi"><i class="fab fa-stack-overflow whiteLink"></i></a></li>
+              </ul>
+          </div>
+          <div class="col-4 py-1 justify-content-end align-items-end">
+            <span>Hosting provided by <a href="https://www.heroku.com/" style="color: white"><strong> Heroku</strong></a></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
@@ -8,13 +26,35 @@
     <script>
         $(function () {
             $(document).scroll(function () {
-                var $nav = $("#mainNavbar");
-                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+                var nav = $("#mainNavbar");
+                nav.toggleClass("scrolled", $(this).scrollTop() > nav.height());
             });
         });
 
         // Used to show the modal on the userCamps page if a user has no associated campgrounds
         $('#noCampsModal').modal({show: true, backdrop: "static", keyboard: false});
+
+        //Grow and shrink logos on hover
+        $('.whiteLink')
+          .on('mouseenter',  function() {
+            var a = $(this);
+            a.stop(true, true).animate({
+              margin: "-.5rem",
+              padding: "+.5rem",
+              fontSize: "2.5rem",
+              height: "+=20"
+            }, 'fast');
+        })
+          .on('mouseleave', function(){
+              var a = $(this);
+              a.stop(true, true).animate({
+                margin: "+.5rem",
+                padding: "-.5rem",
+                fontSize: "1.5rem",
+                height: "-=20"
+              }, 'fast');
+        });
+
     </script>
     </body>
 </html>
